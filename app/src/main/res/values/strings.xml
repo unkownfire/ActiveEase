@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Active Ease</string>
+    <string name="Home">Home</string>
+    <string name="Activities">Activities</string>
+    <string name="Settings">Settings</string>
+    <string name="Map">Map</string>
+</resources>
