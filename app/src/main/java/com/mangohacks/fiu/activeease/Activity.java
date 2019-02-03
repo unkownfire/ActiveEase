@@ -1,24 +1,35 @@
 package com.mangohacks.fiu.activeease;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
 
-@Entity(tableName = "activity_table")
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Activity {
     private String name;
     private String description;
     private int priority;
-    @PrimaryKey(autoGenerate = true)
-    private int id;
-
+    private ArrayList<Activity> subActivities;
+    private HashMap<String, double[]>  acceptableRanges = new HashMap<>();
+    private HashMap<String, double[]> preferredRanges = new HashMap<>();
+    private HashMap<String, double[]> userRanges = new HashMap<>();
     public Activity(String name, String description, int priority) {
         this.name = name;
         this.description = description;
         this.priority = priority;
+
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public HashMap<String, double[]> getAcceptableRanges() {
+        return acceptableRanges;
+    }
+
+    public HashMap<String, double[]> getPreferredRanges() {
+        return preferredRanges;
+
+    }
+
+    public HashMap<String, double[]> getUserRanges() {
+        return userRanges;
     }
 
     public String getName() {
@@ -33,7 +44,4 @@ public class Activity {
         return priority;
     }
 
-    public int getId() {
-        return id;
-    }
 }

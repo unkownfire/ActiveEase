@@ -9,6 +9,8 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 import static com.mangohacks.fiu.activeease.R.layout.activity_main;
 import static com.mangohacks.fiu.activeease.R.layout.frag_home;
 
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.Bottom_Nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
     }
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -37,4 +41,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
+
 }
