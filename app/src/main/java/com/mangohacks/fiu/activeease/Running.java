@@ -10,6 +10,5 @@ public class Running {
     double bestLength(double temp, double windChill)
     {
         return (3460247974418130000000000000000000.0 * Math.pow(temp, -0.00017));
-
     }
 }
